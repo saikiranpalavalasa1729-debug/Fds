@@ -16,8 +16,8 @@ print(df.head())
 df = df.drop_duplicates()  
 
 # Handle missing values (example: fill missing salaries with mean)  
-if "salary" in df.columns:  
-    df["salary"] = df["salary"].fillna(df["salary"].mean())  
+if "Salary" in df.columns:  
+    df["Salary"] = df["Salary"].fillna(df["Salary"].mean())  
 
 # Strip whitespace from string columns  
 str_cols = df.select_dtypes(include="object").columns  
@@ -39,4 +39,5 @@ print("\nCleaned data saved to cleaned_data.h5")
 df = pd.read_hdf("cleaned_data.h5")  
 
 # Display data from HDF5 File  
+
 print(df)  
